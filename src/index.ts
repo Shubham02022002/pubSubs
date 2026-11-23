@@ -1,10 +1,10 @@
 import { logGames } from "./logger.js";
-import { gameManager } from "./store.js";
+import { GameManager } from "./store.js";
 
 logGames();
 
 setInterval(() => {
-  gameManager.addGame(
+  GameManager.getInstance().addGame(
     Math.random().toString(36).substring(2, 15),
     "Alice",
     "Bob",
